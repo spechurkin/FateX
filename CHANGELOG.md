@@ -1,5 +1,13 @@
 # Changelog
 
+### Unreleased
+
+* Migrated character, group, inline and item sheets, sheet setup and actor-template applications to native ApplicationV2.
+* Replaced legacy dialogs and rich-text editors with DialogV2 and ProseMirror, retaining stored fields and sheet registration IDs.
+* Preserved group form isolation, embedded-item actions, template copying, tab state and deletion confirmation.
+* Kept FateX typography, tabs, inputs and editor colors ahead of Foundry V14 theme defaults on FateX sheets.
+* Added regression tests using installed V13/V14 application classes and a local CSS preview. See `tests/README.md` for coverage and live-world checks.
+
 ### 1.3.2
 * Added the optional 2d6 based roll mode (disabled by default)
 
