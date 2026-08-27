@@ -238,7 +238,7 @@ export class GroupSheet extends FateSheetMixin(ActorSheetV2) {
             {
                 name: `tokenReference-${sceneID}-${tokenID}`,
                 type: "tokenReference",
-                system: { id: tokenID, scene: sceneID ,
+                system: { id: tokenID, scene: sceneID },
             },
         ]);
     }

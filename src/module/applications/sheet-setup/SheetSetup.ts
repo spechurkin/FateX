@@ -113,7 +113,7 @@ export class SheetSetup extends FateSheetMixin(applications.api.DocumentSheetV2)
         const items = this.actor.items.filter((item) => type === CLEAR.EVERYTHING || item.type === TYPES[type]);
         await this.actor.deleteEmbeddedDocuments(
             "Item",
-            items.map((item) => item.id,
+            items.map((item) => item.id),
         );
     }
 }

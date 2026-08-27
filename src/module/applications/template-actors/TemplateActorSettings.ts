@@ -85,7 +85,7 @@ export class TemplateActorSettings extends HandlebarsApplicationMixin(Applicatio
                 type: "character",
                 flags: { fatex: { isTemplateActor: true } },
             },
-            { renderSheet: true ,
+            { renderSheet: true },
         );
         if (actor) new SheetSetup({ document: actor }).render({ force: true });
         this.refreshApplications();

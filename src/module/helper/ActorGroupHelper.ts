@@ -26,7 +26,7 @@ export function getReferencesByGroupType(type: groupType = "manual", actor?: Fat
                 .map((combatant) => ({
                     _id: `combatantReference-${combatant.id}`,
                     type: "combatantReference",
-                    system: { id: combatant.id! ,
+                    system: { id: combatant.id! },
                 }));
         default:
             return (actor?.items.filter((item) => ["actorReference", "tokenReference"].includes(item.type)) ?? [])

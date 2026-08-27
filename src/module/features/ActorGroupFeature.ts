@@ -74,14 +74,13 @@ export class ActorGroupFeature {
         html.find(".folder").each((_i, element) => {
             const header = $(element).children(".folder-header");
             if (header.find(".create-folder-group").length) return;
-            const button = $(
-                '<a cl"<a class=\"create-folder-group\"><i class=\"fas fa-user-friends fa-fw\" inert></i></a>"       );
+            const button = $('<a class="create-folder-group"><i class="fas fa-user-friends fa-fw" inert></i></a>');
             button.attr({
                 "data-folder": element.dataset.folderId,
                 "data-groupname": header.find(".folder-name, h3").first().text(),
                 "aria-label": label,
                 title: label,
-           });
+            });
             button.on("click", (event) => this._onClickCreateGroup(event as unknown as MouseEvent));
             header.append(button);
         });
