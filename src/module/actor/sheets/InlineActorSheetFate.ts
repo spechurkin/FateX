@@ -17,7 +17,13 @@ export class InlineActorSheetFate extends CharacterSheet {
             scrollable: [".fatex__inline_sheet__content"],
         },
     };
-    tabGroups = { primary: "aspects" };
+    static TABS = {
+        primary: {
+            initial: "aspects",
+            tabs: [{ id: "aspects" }, { id: "consequences" }, { id: "stress" }],
+        },
+    };
+
     combatant: any;
 
     get canRemoveFromGroup(): boolean {

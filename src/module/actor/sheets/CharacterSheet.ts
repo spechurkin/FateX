@@ -18,7 +18,13 @@ export class CharacterSheet extends FateSheetMixin(ActorSheetV2) {
         sheet: { template: "systems/fatex/templates/actor/character.hbs", scrollable: [".fatex-desk__content"] },
     };
 
-    tabGroups = { primary: "skills" };
+    static TABS = {
+        primary: {
+            initial: "skills",
+            tabs: [{ id: "skills" }, { id: "extras" }, { id: "bio" }],
+        },
+    };
+
     private editMode = false;
 
     static onToggleEditMode(this: CharacterSheet) {
@@ -87,10 +93,6 @@ export class CharacterSheet extends FateSheetMixin(ActorSheetV2) {
         }
         html.find(".fatex-js-item-to-chat").on("click", (event) => BaseItem._onItemSendToChat(event, this));
         this.element.classList.toggle("fatex-js-edit-mode", this.editMode && this.isEditable);
-        const tab = this.tabGroups.primary;
-        if (this.element.querySelector(`.tabs [data-tab="${tab}"]`)) {
-            this.changeTab(tab, "primary", { force: true, updatePosition: false });
-        }
     }
 
     _getHeaderControls() {
