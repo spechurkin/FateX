@@ -2,6 +2,7 @@ import { enrichHTML, FateSheetMixin, ItemSheetV2 } from "../applications/Applica
 
 export class ItemSheetFate extends FateSheetMixin(ItemSheetV2) {
     static DEFAULT_OPTIONS = {
+        tag: "form",
         classes: ["fatex", "fatex-sheet", "fatex-sheet--item"],
         position: { width: 575, height: 650 },
         window: { resizable: true },

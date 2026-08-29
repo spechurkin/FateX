@@ -4,6 +4,7 @@ import { ActorSheetV2, enrichHTML, FateSheetMixin } from "../../applications/App
 
 export class CharacterSheet extends FateSheetMixin(ActorSheetV2) {
     static DEFAULT_OPTIONS: any = {
+        tag: "form",
         classes: ["fatex", "fatex-sheet"],
         position: { width: 905, height: 800 },
         window: { resizable: true },
